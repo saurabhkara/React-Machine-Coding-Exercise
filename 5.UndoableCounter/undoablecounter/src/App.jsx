@@ -23,12 +23,23 @@ function App() {
     if (data.length) {
       const copyHistory = data;
       const lastAction = copyHistory.shift();
-      console.log(copyHistory);
-      setCount((prev) => prev + lastAction.action);
+      setCount(lastAction.prev);
+      setData(copyHistory);
+      const redoListCopt = redoList;
+      redoListCopt.unshift(lastAction);
+      setRedoList(redoListCopt);
+    }
+  };
+  const handleRedo = () => {
+    if (redoList.length) {
+      const redoListCopy = redoList;
+      const lastRedoAction = redoListCopy.shift();
+      setCount((prev) => prev + lastRedoAction.action);
+      const copyHistory = data;
+      copyHistory.unshift(lastRedoAction);
       setData(copyHistory);
     }
   };
-  const handleRedo = () => {};
 
   return (
     <div className="container">
