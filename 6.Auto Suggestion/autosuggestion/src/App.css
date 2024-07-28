@@ -1,0 +1,75 @@
+#root {
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 230px;
+  height: 40px;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.shopping-list {
+  width: 230px;
+  height: 150px;
+  margin: 10px auto;
+  background-color: lightgray;
+  overflow-y: auto;
+}
+
+.product {
+  text-align: left;
+  padding: 2px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.product:hover {
+  background-color: aquamarine;
+}
+
+.bucket {
+  width: 300px;
+  margin: 50px auto;
+}
+
+.bucket-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  background-color: lightgreen;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.button {
+  background-color: lightgreen;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.text {
+  text-decoration: none;
+}
