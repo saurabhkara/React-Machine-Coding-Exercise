@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import UserForm from "./component/UserForm";
 
 const formArray = [
   {
@@ -67,22 +68,14 @@ function App() {
   return (
     <div className="app">
       {!isSubmited ? (
-        <form action="container" onSubmit={handleSubmit}>
-          {index !== 0 && (
-            <a onClick={handleBack} href="/">
-              back
-            </a>
-          )}
-          <label>{forms[index].name}</label>
-          <input
-            placeholder={forms[index].placeholder}
-            type={forms[index].buttonType}
-            id={forms[index].id}
-            onChange={handleOnChange}
-            value={formData[forms[index].id]}
-          />
-          <button className="btn">{forms[index].buttonText}</button>
-        </form>
+        <UserForm
+          handleOnChange={handleOnChange}
+          handleBack={handleBack}
+          handleSubmit={handleSubmit}
+          index={index}
+          forms={forms}
+          formData={formData}
+        />
       ) : (
         <div>
           <h1>Success</h1>
