@@ -1,0 +1,32 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+input {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+input:focus {
+  outline-color: blue;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: purple;
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.error {
+  border: 1px solid red;
+}
