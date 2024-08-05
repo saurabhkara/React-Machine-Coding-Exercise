@@ -1,0 +1,32 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app {
+  background-color: bisque;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 30px;
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.list {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  background-color: white;
+  margin-top: 10px;
+  align-items: center;
+  text-align: left;
+  overflow-y: auto;
+}
