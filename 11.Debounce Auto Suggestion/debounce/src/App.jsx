@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import debounceQuery from "./utils";
 
 function App() {
   const [input, setInput] = useState("");
@@ -11,13 +12,8 @@ function App() {
 
   const initApiCall = async () => {
     let url = `https://api.frontendeval.com/fake/food/${input}`;
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      setList(data);
-    } catch (error) {
-      console.log("Error", error);
-    }
+    const result = await debounceQuery(url);
+    setList(result);
   };
 
   useEffect(() => {
@@ -34,7 +30,6 @@ function App() {
       {list && list.length > 0 && (
         <div className="list">
           {list.map((item, index) => {
-            console.log(item);
             return <div key={index}>{item}</div>;
           })}
         </div>
