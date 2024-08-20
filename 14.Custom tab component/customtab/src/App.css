@@ -1,0 +1,39 @@
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+.heading {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innerHeader {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selected {
+  background-color: black;
+  color: white;
+}
