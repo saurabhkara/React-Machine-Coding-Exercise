@@ -4,6 +4,7 @@ import UseMemo from "./components/UseMemo";
 import UseRef from "./components/UseRef";
 import UseState from "./components/UseState";
 import UseCallback from "./components/UseCallback";
+import UseContext from "./components/UseContext";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
     // <UseEffect />
     // <UseRef />
     // <UseMemo />
-    <UseCallback />
+    // <UseCallback />
+    <UseContext />
   );
 }
 
