@@ -7,6 +7,7 @@ import UseCallback from "./components/UseCallback";
 import UseContext from "./components/UseContext";
 import UseReducer from "./components/UseReducer";
 import UseLayoutEffect from "./components/UseLayoutEffect";
+import CustomHook from "./components/CustomHook";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
     // <UseCallback />
     // <UseContext />
     // <UseReducer />
-    <UseLayoutEffect />
+    // <UseLayoutEffect />
+    <CustomHook />
   );
 }
 
